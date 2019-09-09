@@ -30,7 +30,7 @@ export default new Vuex.Store({
           function (x) {
             return x.id
           }
-        ).indexOf(payload), 1)
+        ).us(payload), 1)
     },
     delTeam (state, payload) {
       state.teams.splice(

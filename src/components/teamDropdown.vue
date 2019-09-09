@@ -1,7 +1,9 @@
 <template>
   <div>
     <select name="teamid">
-      <option v-for="team in teams" v-bind:key="team.id" :value="team.id">{{team.team_name}}</option>
+      <option v-for="team in teams" v-bind:key="team.id" :value="team.id">
+        {{team.team_name}}
+      </option>
     </select>
   </div>
 </template>
