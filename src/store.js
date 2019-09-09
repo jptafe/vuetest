@@ -30,7 +30,7 @@ export default new Vuex.Store({
           function (x) {
             return x.id
           }
-        ).us(payload), 1)
+        ).indexOf(payload), 1)
     },
     delTeam (state, payload) {
       state.teams.splice(
@@ -39,6 +39,25 @@ export default new Vuex.Store({
             return x.id
           }
         ).indexOf(payload), 1)
+    },
+    addTeam (state, payload) {
+      console.log(payload)
+      state.teams.push({
+        'id': '0',
+        'team_name': payload.target[0].value,
+        'color': payload.target[1].value,
+        'image': payload.target[2].value
+      })
+    },
+    addPlayer (state, payload) {
+      console.log(payload)
+      state.players.push({ 'id': '0',
+        'name': payload.target[0].value,
+        'seated_loc': payload.target[1].value,
+        'color': payload.target[2].value,
+        'image': payload.target[3].value,
+        'team': payload.target[4].value
+      })
     },
     getPlayersInTeam (state, payload) {
       state.players.filter(function () { return state.players.team_id === payload })

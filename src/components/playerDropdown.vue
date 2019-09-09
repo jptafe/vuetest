@@ -1,6 +1,6 @@
 <template>
     <select name="playerid">
-      <option v-for="player in players" v-bind:key="player.id" :value="player.id">
+      <option v-for="player in players" v-bind:key="player.id" name="player_id" :value="player.id">
         {{player.name}}
       </option>
     </select>

@@ -7,16 +7,16 @@
        <span>{{player.seated_loc}} - </span>
        <input type="button" :title="player.id" @click="delPlayer" value="DEL">
     </p>
-    <playerDropdown></playerDropdown>
+    <playerForm></playerForm>
   </div>
 </template>
 <script>
 import store from '@/store'
-import playerDropdown from '@/components/playerDropdown.vue'
+import playerForm from '@/components/playerForm.vue'
 
 export default {
   components: {
-    playerDropdown
+    playerForm
   },
   computed: {
     players () {

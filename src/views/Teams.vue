@@ -7,16 +7,16 @@
        <span>{{team.color}} - </span>
        <input type="button" :title="team.id" @click="delTeam" value="del">
     </p>
-    <teamDropdown></teamDropdown>
+    <teamForm></teamForm>
   </div>
 </template>
 <script>
 import store from '@/store'
-import teamDropdown from '@/components/teamDropdown.vue'
+import teamForm from '@/components/teamForm.vue'
 
 export default {
   components: {
-    teamDropdown
+    teamForm
   },
   computed: {
     teams () {

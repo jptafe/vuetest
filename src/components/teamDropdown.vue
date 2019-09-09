@@ -1,7 +1,7 @@
 <template>
   <div>
     <select name="teamid">
-      <option v-for="team in teams" v-bind:key="team.id" :value="team.id">
+      <option v-for="team in teams" v-bind:key="team.id" name="team_id" :value="team.id">
         {{team.team_name}}
       </option>
     </select>
@@ -11,7 +11,7 @@
 <script>
 import store from '@/store'
 export default {
-  name: 'playerdropdown',
+  name: 'teamdropdown',
   computed: {
     teams () {
       return store.getters.getTeams
